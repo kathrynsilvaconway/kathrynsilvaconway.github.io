@@ -58,13 +58,69 @@
 #         if char == ')': cnt -= 1
 #         if cnt < 0: return False
 #     return True if cnt == 0 else False
-def dupEncode(string):
+# def dupEncode(string):
+#     list = []
+#     result = []
+#     string = string.lower()
+#     for x in string:
+#         list.append(x)
+#     for y in list:
+#         if list.count(y) < 2:
+#             result.append('(')
+#         else: result.append(')')
+#     print_it = ''.join(result)
+#     return print_it
+# print(dupEncode('Success1!'))
+
+# def countCharacters(string):
+#     dict = {}
+#     string = string.lower()
+#     for x in string:
+#         dict[x] = string.count(x)
+#     return dict
+# print(countCharacters('Success'))
+
+def decodeMorse(morse_code):
     list = []
-    string = string.lower()
-    for x in string:
-        count = string.count(x)
-    for x in string:
-        print (count)
-        
+    code = morse_code.split()
+    m = {
+    '.-': 'A',
+    '-...': 'B',
+    '-.-.': 'C',
+    '-..': 'D',
+    '.': 'E',
+    '..-.': 'F',
+    '--.': 'G',
+    '....': 'H',
+    '..': 'I',
+    '.---': 'J',
+    '-.-': 'K',
+    '.-..': 'L',
+    '--': 'M',
+    '-.': 'N',
+    '---': 'O',
+    '.--.': 'P',
+    '--.-': 'Q',
+    '.-.': 'R',
+    '...': 'S',
+    '-': 'T',
+    '..-': 'U',
+    '...-': 'V',
+    '.--': 'W',
+    '-..-': 'X',
+    '-.--': 'Y',
+    '--..': 'Z',
+    '-----': '0',
+    '.----': 1,
+    '..---': 2,
+    '...--': 3,
+    '....-': 4,
+    '.....': 5,
+    '-....': 6,
+    '--...': 7,
+    '---..': 8,
+    '----.': 9
+    }
+    print(type(code))
     
-dupEncode('Success1!')
+print(decodeMorse('.... . -.--   .--- ..- -.. .'))
