@@ -82,7 +82,7 @@
 
 def decodeMorse(morse_code):
     list = []
-    code = morse_code.split()
+    code = morse_code.split("   ", ' ')
     m = {
     '.-': 'A',
     '-...': 'B',
@@ -121,6 +121,13 @@ def decodeMorse(morse_code):
     '---..': 8,
     '----.': 9
     }
-    print(type(code))
+    print(code)
+    # for x in code:
+    #     if x in m:
+    #         list.append(m[x])   
+    # return str(list)
+    
+        
+        
     
 print(decodeMorse('.... . -.--   .--- ..- -.. .'))
