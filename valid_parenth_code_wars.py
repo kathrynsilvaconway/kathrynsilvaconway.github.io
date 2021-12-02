@@ -1,6 +1,6 @@
 # def likes(names):
 #     if not names:
-#         return "no one likes this"
+        # return "no one likes this"
 #     if len(names) == 1:
 #         return (str(names[0])+' likes this')
 #     if len(names) == 2:
@@ -134,13 +134,27 @@
     
 # print(decodeMorse('.... . -.--   .--- ..- -.. .'))
 
-def find_it(seq):
-    count = 0
-    for x in seq:
-        count+= 1
-        if count % 2 == 0:
-            count = 0
-    else:
-        return x
+# from typing import Collection
 
-print(find_it([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+
+# def find_it(seq):
+#     for x in seq:
+#         if seq.count(x) % 2 != 0:
+#             return x    
+# print(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
+
+def snail(map):
+    pattern = []
+    ts = map[0][0]
+    te = map[0][-1]
+    be = map[-1][-1]
+    bs = map[-1][0]
+    pattern.append(ts)
+    pattern.append(te)
+    pattern.append(bs)
+    pattern.append(be)
+
+
+
+    print(pattern)
+print(snail([[1, 2, 3], [4, 5, 6 ], [7, 8, 9]]))
