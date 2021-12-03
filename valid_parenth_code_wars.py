@@ -143,18 +143,37 @@
 #             return x    
 # print(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
 
-def snail(map):
-    pattern = []
-    ts = map[0][0]
-    te = map[0][-1]
-    be = map[-1][-1]
-    bs = map[-1][0]
-    pattern.append(ts)
-    pattern.append(te)
-    pattern.append(bs)
-    pattern.append(be)
+# def snail(map):
+#     pattern = []
+#     while len(map) > 0:
+#         pattern += map[0]
+#         del map[0]
 
+#         if len(map) > 0:
+#             for x in map:
+#                 pattern.append(x[-1])
+#                 del x[-1]
+#             if len(map) > 0:
+#                 pattern += map[-1][::-1]
+#                 del map[-1]
+#             for x in reversed(map):
+#                 pattern.append(x[0])
+#                 del x[0]
+        
 
+#     return pattern
+# print(snail([[1, 2, 3], [4, 5, 6 ], [7, 8, 9]]))
 
-    print(pattern)
-print(snail([[1, 2, 3], [4, 5, 6 ], [7, 8, 9]]))
+def cakes(recipe, available):
+    list = []
+    for key, value in recipe.items():
+        if key not in available:
+            return 0
+        else:
+            how_much = available[key] // recipe[key]
+            list.append(how_much)
+    return sorted(list)[0]
+                    
+
+print(cakes(recipe = {"flour": 500, "sugar": 200, "eggs": 1},
+available = {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200}))
