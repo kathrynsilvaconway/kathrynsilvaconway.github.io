@@ -3,7 +3,7 @@
         # return "no one likes this"
 #     if len(names) == 1:
 #         return (str(names[0])+' likes this')
-#     if len(names) == 2:
+    # if len(names) == 2:
 #         return (str(names[0])+' and '+str(names[1])+' like this')
 #     if len(names) == 3:
 #         return (str(names[0])+', '+str(names[1])+' and '+str(names[2]+' like this'))
@@ -164,16 +164,45 @@
 #     return pattern
 # print(snail([[1, 2, 3], [4, 5, 6 ], [7, 8, 9]]))
 
-def cakes(recipe, available):
-    list = []
-    for key, value in recipe.items():
-        if key not in available:
-            return 0
-        else:
-            how_much = available[key] // recipe[key]
-            list.append(how_much)
-    return sorted(list)[0]
+# def cakes(recipe, available):
+#     list = []
+#     for key, value in recipe.items():
+#         if key not in available:
+#             return 0
+#         else:
+#             how_much = available[key] // recipe[key]
+#             list.append(how_much)
+#     return sorted(list)[0]
                     
 
-print(cakes(recipe = {"flour": 500, "sugar": 200, "eggs": 1},
-available = {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200}))
+# print(cakes(recipe = {"flour": 500, "sugar": 200, "eggs": 1},
+# available = {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200}))
+# def fib(x):
+#     if x == 0:
+#         return 0
+#     elif x == 1:
+#         return 1
+#     elif x > 1:
+#         return fib(x-2)+ fib(x-1)
+# for x in range(0, 11):
+#     print(fib(x))
+
+def nesting(array, other):
+    array = str(array)
+    other = str(other)
+    array_str = ''
+    other_str = ''
+    for x in array:
+        if type(x) is int == False:
+            array_str += x
+        else:
+            array_str += '0'
+    # for x in other:
+    #     if x =='[':
+    #         other_str += x
+    #     else:
+    #         other_str += '0'
+    print(array_str)
+    print(other_str)
+nesting([ 1, [ 1, 1 ] ], [ 2, [ 2, 2 ] ])
+            
