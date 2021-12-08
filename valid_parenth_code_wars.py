@@ -187,22 +187,37 @@
 # for x in range(0, 11):
 #     print(fib(x))
 
-def nesting(array, other):
-    array = str(array)
-    other = str(other)
-    array_str = ''
-    other_str = ''
-    for x in array:
-        if type(x) is int == False:
-            array_str += x
-        else:
-            array_str += '0'
-    # for x in other:
-    #     if x =='[':
-    #         other_str += x
-    #     else:
-    #         other_str += '0'
-    print(array_str)
-    print(other_str)
-nesting([ 1, [ 1, 1 ] ], [ 2, [ 2, 2 ] ])
-            
+# def nesting(array, other):
+#     array = str(array)
+#     other = str(other)
+#     array_str = ''
+#     other_str = ''
+#     for x in array:
+#         if x == '[' or x == ']' or x == ',' or x == ' ' or x == "'":
+#             array_str += x
+#     for x in other:
+#         if x == '[' or x == ']' or x == ',' or x == ' ' or x == "'":
+#             other_str += x
+#     print(array_str)
+#     print(other_str)
+#     if array_str == other_str:
+#         return True
+#     else:
+#         return False
+# print(nesting([ 1, [ 1, 1 ] ], [ 2, [ 2, 2 ] ]))
+
+# look up how to use permutations
+# def permutations(string):
+#     import itertools
+#     this_list = []
+#     result = list(itertools.permutations(string))
+#     for x in result:
+#         this_list.append(''.join(x))
+#     return list(set(this_list))
+
+# print(permutations('aabb'))
+
+import ipaddress
+def ip_add(integer):
+    return str(ipaddress.ip_address(integer))
+print(ip_add(3232235777))
