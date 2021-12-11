@@ -217,7 +217,105 @@
 
 # print(permutations('aabb'))
 
-import ipaddress
-def ip_add(integer):
-    return str(ipaddress.ip_address(integer))
-print(ip_add(3232235777))
+# import ipaddress
+# def ip_add(integer):
+#     return str(ipaddress.ip_address(integer))
+# print(ip_add(3232235777))
+
+# ignore caps.
+# ignore letters that appear only once.
+# return a str that displays max letters 
+# and which str they came from.
+# type out letters, don't return count.
+# prefix with 1: for str 1 and 2: for str 2.
+# if max is same for both, prefix with =:
+
+# filter
+
+# def mix(s1, s2):
+#     s1_filter = []
+#     s2_filter = []
+#     new_list = []
+#     for x in s1:
+#         if x.islower() and s1.count(x) > 1:
+#             s1_filter.append(x)
+
+#     for x in s2:
+#         if x.islower() and s2.count(x) > 1:
+#             s2_filter.append(x)
+#     for x in s1_filter:
+#         if x not in s2_filter:
+#             stringy = ('1:'+ x*s1_filter.count(x)+'/')
+#             new_list.append(stringy)
+#         else:
+#             if s1_filter.count(x) > s2_filter.count(x):
+#                 stringy = ('1:'+ x*s1_filter.count(x)+'/')
+#                 new_list.append(stringy)
+#             elif s1_filter.count(x) < s2_filter.count(x):
+#                 stringy = ('2:'+ x*s1_filter.count(x)+'/')
+#                 new_list.append(stringy)
+#             else:
+#                 stringy = ('=:'+ x*s1_filter.count(x)+'/')
+#                 new_list.append(stringy)
+#     for x in s2_filter:
+#         if x not in s1_filter:
+#             stringy = ('2:'+ x*s2_filter.count(x)+'/')
+#             new_list.append(stringy)
+#     new_list = set(new_list)
+#     new_list = sorted(new_list, key=len)
+#     new_list =list(reversed(new_list))
+#     new_list = sorted(new_list)
+#     new_list = ''.join(new_list)
+#     new_list = new_list.rstrip(new_list[-1])
+#     return new_list
+    
+            
+# print(mix("Are they here", "yes, they are here"))
+# def dbl_linear(n):
+#     u = [1]
+#     x = 0
+#     y = 0
+#     while len(u) <= n:
+#         first = (2 * u[x] + 1)
+#         second = (3 * u[y] + 1)
+#         if first > second: 
+#             u.append(second)
+#             y += 1
+#         elif second > first:
+#             u.append(first)
+#             x += 1
+#         else:
+#             u.append(first)
+#             x += 1
+#             y += 1
+#     print(first, second)
+#     return u[n]
+    
+# print(dbl_linear(13))
+
+def top_3_words(text):
+    counts = {}
+    top_list = []
+    check_for_letters = []
+    for x in text:
+        if x.isalpha() == False and x is not "'" and x is not " ":
+            text = text.replace(x, '')
+            text = text.lower()
+        for y in x:
+            if y.isalpha():
+                check_for_letters.append(x)
+    if len(check_for_letters) == 0:
+        return []
+
+    text = list(text.split())
+    for x in text:
+        counts[text.count(x)] = x
+        counts = dict(sorted(counts.items()))
+    for key, value in counts.items():
+        top_list.append(value)
+    top_list = list(reversed(top_list))
+    if len(top_list) > 3:
+        return top_list[:3]
+    if len(top_list) <= 3:
+        return top_list
+print(top_3_words(("''")))
