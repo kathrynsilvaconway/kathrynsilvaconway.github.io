@@ -293,29 +293,70 @@
     
 # print(dbl_linear(13))
 
-def top_3_words(text):
-    counts = {}
-    top_list = []
-    check_for_letters = []
-    for x in text:
-        if x.isalpha() == False and x is not "'" and x is not " ":
-            text = text.replace(x, '')
-            text = text.lower()
-        for y in x:
-            if y.isalpha():
-                check_for_letters.append(x)
-    if len(check_for_letters) == 0:
-        return []
+# def top_3_words(text):
+#     counts = {}
+#     top_list = []
+#     check_for_letters = []
+#     for x in text:
+#         if x.isalpha() == False and x is not "'" and x is not " ":
+#             text = text.replace(x, '')
+#             text = text.lower()
+#         for y in x:
+#             if y.isalpha():
+#                 check_for_letters.append(x)
+#     if len(check_for_letters) == 0:
+#         return []
 
-    text = list(text.split())
-    for x in text:
-        counts[text.count(x)] = x
-        counts = dict(sorted(counts.items()))
-    for key, value in counts.items():
-        top_list.append(value)
-    top_list = list(reversed(top_list))
-    if len(top_list) > 3:
-        return top_list[:3]
-    if len(top_list) <= 3:
-        return top_list
-print(top_3_words(("''")))
+#     text = list(text.split())
+#     for x in text:
+#         counts[text.count(x)] = x
+#         counts = dict(sorted(counts.items()))
+#     for key, value in counts.items():
+#         top_list.append(value)
+#     top_list = list(reversed(top_list))
+#     if len(top_list) > 3:
+#         return top_list[:3]
+#     if len(top_list) <= 3:
+#         return top_list
+# print(top_3_words(("''")))
+
+# def counting_sheep(sheep):
+#     count = 0
+#     for x in sheep:
+#         if x == True:
+#             count += 1
+#         else:
+#             pass
+#     return count
+# print(counting_sheep([True,  True,  True,  False,
+#   True,  True,  True,  True ,
+#   True,  False, True,  False,
+#   True,  False, False, True ,
+#   True,  True,  True,  True ,
+#   False, False, True,  True]))
+
+# def removing_elements(elems):
+#     result = []
+#     for x in range(len(elems)):
+#         if x % 2 == 0:
+#             result.append(elems[x])
+#     return result
+# print(removing_elements(["Keep", "Remove", "Keep", "Remove", "Keep", ...]))
+
+# def removing_elements(elems):
+#     result = []
+#     return [result.append(elems[x]) for x in range(len(elems)) if x % 2 == 0]
+# print(removing_elements(["Keep", "Remove", "Keep", "Remove", "Keep", ...]))
+
+def reverse_digits(num):
+    x = []
+    while num > 0:  
+        q = num % 10
+        x.append(q)
+        num = num - q
+        num = num // 10
+    return x
+
+print(reverse_digits(3456789))
+
+
