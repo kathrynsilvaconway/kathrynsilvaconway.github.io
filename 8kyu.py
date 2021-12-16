@@ -1,7 +1,7 @@
 # def bonus_time(salary, bonus):
 #     if bonus == True:
 #         salary = salary * 10
-#     return (f"${salary}")
+    # return (f"${salary}")
 
 # Best Practice Vote:
 # def bonus_time(salary, bonus):
@@ -56,3 +56,37 @@
 
 #     def square_sum(numbers):
 #         return sum(x ** 2 for x in numbers)
+
+# 1
+# def say_hello(name, city, state):
+#     string = 'Hello, '
+#     for x in name:
+#         string += x
+#         string += ' '
+#     string = string[:-1]
+#     string += '! Welcome to '
+#     string += city
+#     string += ", "
+#     string += state
+#     string += '!'
+#     return string
+ 
+
+
+# print(say_hello(['John', 'Smith'], 'Phoenix', 'Arizona'))
+
+# def say_hello(name, city, state):
+#     return "Hello, {}! Welcome to {}, {}!".format(" ".join(name), city, state)
+# print(say_hello(['John', 'Smith'], 'Phoenix', 'Arizona'))
+
+def grader(score):
+    if score < .6 or score > 1:
+        return 'F'
+    elif score >= .9:
+        return 'A'
+    elif score >= .8:
+        return 'B'
+    elif score >= .7:
+        return 'C'
+    elif score >= .6:
+        return 'D'
