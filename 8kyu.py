@@ -79,14 +79,20 @@
 #     return "Hello, {}! Welcome to {}, {}!".format(" ".join(name), city, state)
 # print(say_hello(['John', 'Smith'], 'Phoenix', 'Arizona'))
 
-def grader(score):
-    if score < .6 or score > 1:
-        return 'F'
-    elif score >= .9:
-        return 'A'
-    elif score >= .8:
-        return 'B'
-    elif score >= .7:
-        return 'C'
-    elif score >= .6:
-        return 'D'
+# def grader(score):
+#     if score < .6 or score > 1:
+#         return 'F'
+#     elif score >= .9:
+#         return 'A'
+#     elif score >= .8:
+#         return 'B'
+#     elif score >= .7:
+#         return 'C'
+#     elif score >= .6:
+#         return 'D'
+# 
+# def reverse_list(l):
+#   return l[::-1]
+
+# def reverse_list(l):
+#     return list(reversed(l))
