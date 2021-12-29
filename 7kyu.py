@@ -15,16 +15,16 @@
 # print(compare("!!", "7476"))
 
 # def compare(s1,s2):
-#     count1, count2 = 0, 0
-#     if s2 == "":
-#         return True
-#     for x in s1.upper():
-#         if x.isalpha() == True:
-#             count1 += ord(x)
-#     for x in s2.upper():
-#         if x.isalpha() == True:
-#             count2 += ord(x)
-#     return True if count1 == count2 else False
+    # count1, count2 = 0, 0
+    # if s2 == "":
+    #     return True
+    # for x in s1.upper():
+    #     if x.isalpha() == True:
+    #         count1 += ord(x)
+    # for x in s2.upper():
+    #     if x.isalpha() == True:
+    #         count2 += ord(x)
+    # return True if count1 == count2 else False
 
 # print(compare("!!", "7476"))
 # def two_oldest_ages(ages):
@@ -58,4 +58,32 @@
 # def solution(n):
 #     return round(n, 2)
 
+# WRONG:
+# def solution(digits):
+#     dig_list = []
+#     while digits > 0:
+#         x = digits % 10
+#         dig_list.append(x)
+#         digits = (digits - x) // 10 
+#     return sorted(dig_list[:-5])
+# print(solution(1234567890))
+def solution(digits):
+    dig_list = []
+    for x in range(len(digits)):
+        y = ''
+        if (x + 4) < len(digits):
+            y += digits[x]
+            y += digits[x + 1]
+            y += digits[x + 2]
+            y += digits[x + 3]
+            y += digits[x + 4]
+            dig_list.append(y)
+    dig_list = sorted(dig_list)
+
+    return int(dig_list[-1])
+
+
+
+    
+print(solution("1234567890"))
 
