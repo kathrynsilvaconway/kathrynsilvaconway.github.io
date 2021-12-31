@@ -67,23 +67,50 @@
 #         digits = (digits - x) // 10 
 #     return sorted(dig_list[:-5])
 # print(solution(1234567890))
-def solution(digits):
-    dig_list = []
-    for x in range(len(digits)):
-        y = ''
-        if (x + 4) < len(digits):
-            y += digits[x]
-            y += digits[x + 1]
-            y += digits[x + 2]
-            y += digits[x + 3]
-            y += digits[x + 4]
-            dig_list.append(y)
-    dig_list = sorted(dig_list)
+# def solution(digits):
+#     dig_list = []
+#     for x in range(len(digits)):
+#         y = ''
+#         if (x + 4) < len(digits):
+#             y += digits[x]
+#             y += digits[x + 1]
+#             y += digits[x + 2]
+#             y += digits[x + 3]
+#             y += digits[x + 4]
+#             dig_list.append(y)
+#     dig_list = sorted(dig_list)
+#     return int(dig_list[-1])
+# print(solution("1234567890"))
 
-    return int(dig_list[-1])
+# def solution(digits):
+#     numlist = [int(digits[i:i+5]) for i in range(0,len(digits)-4)]
+#     return max(numlist)
 
+# def solution(digits):
+#     return int(max(digits[a:a + 5] for a in range(len(digits) - 4)))
 
+# def solution(digits):
+#     result = -1;
+#     for i in range(len(digits)):
+#         current = int(digits[i: i+5])
+#         if current >= result:
+#             result = current
+#     return result
 
-    
-print(solution("1234567890"))
+# def solution(full_text, search_text):
+#     if search_text in full_text:
+#         return full_text.count(search_text)
+        
+# print(solution('aa_bb_cc_dd_bb_e', 'bb'))
 
+# def solution(full_text, search_text):
+#     return full_text.count(search_text) if search_text in full_text
+        
+# print(solution('aa_bb_cc_dd_bb_e', 'bb'))
+def populate_dict(keys, default):
+    # pop= {}
+    # for x in keys:
+    #     pop[x] = default
+    # return pop
+    return [(x + 1) for x in keys]
+print(populate_dict([1,2,3,4], 'GO'))
