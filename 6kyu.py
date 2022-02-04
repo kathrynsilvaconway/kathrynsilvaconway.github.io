@@ -14,6 +14,10 @@
 
 # print(cake(400, 'jaam'))
 
+from re import U
+from ssl import VERIFY_X509_PARTIAL_CHAIN
+
+
 def compare(s1,s2):
     count_s1, count_s2 = 0, 0
     allowed_chars ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -46,3 +50,37 @@ print(compare('zz1', ''))
 #     result = [ages2[-2], ages2[-1]]
 #     return result
 # print(two_oldest_ages([1, 5, 87, 45, 8, 8]))
+vgfidvifbdfhilaviafvbdffd vf  vfda vfadil vbadfl  v fd4
+av 
+ValueError ValueErrord varsv 
+ 
+ d v
+  Ud vars
+  vdpu vars  V 
+   v 
+    
+      varsD vuvuVU  
+       vVU
+        vars 
+        D U
+
+         
+         V TG
+          ValueError
+          V U Y ValueError V UV5U
+           V
+           U VU
+            VERIFY_X509_PARTIAL_CHAIN V U
+            5V  U
+                V UVU 
+                    V
+                    U 
+                    V   U 
+                    V   
+                     V  
+                      V 
+                        V
+                        3  
+                        C T
+
+                            3
